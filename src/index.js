@@ -1,13 +1,13 @@
-import React from "react";
-import { render } from "react-dom";
-import App from "./App";
-import { Provider } from "react-redux";
-import { combineReducers, createStore, applyMiddleware } from "redux";
-import todos from "./reducers/todoReducer";
-import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
+import React from 'react';
+import {render} from 'react-dom';
+import App from './App';
+import {Provider} from 'react-redux';
+import {combineReducers, createStore, applyMiddleware} from 'redux';
+import todos from './reducers/todoReducer';
+import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 
 const getRootReducer = () => {
-  return combineReducers({ todos });
+  return combineReducers({todos});
 };
 
 const configureStore = initialState => {
@@ -24,5 +24,5 @@ render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
